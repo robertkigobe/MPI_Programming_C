@@ -1,5 +1,11 @@
+//This program can only be run on a processor with 2 cores
+
 #include <stdio.h>
 #include <mpi.h>
+
+
+
+
 
 int main (int argc, char** argv)
 {
