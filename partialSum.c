@@ -1,53 +1,24 @@
-//This program can only be run on a processor with 2 cores
-
-#include <stdio.h>
 #include <mpi.h>
+#include <stdio.h>
 
-
-
-
-
-int main (int argc, char** argv)
-{
-	MPI_Init(NULL,NULL);
-        int rank,size;
-
-	MPI_Comm_rank(MPI_COMM_WORLD,&rank);
-	MPI_Comm_size(MPI_COMM_WORLD,&size);
+//start of main program
+int main(int argc, char *argv[]) {
+	int nprosc, mypid,i,c=0,rdata;
+	MPI_Init(&argc, &argv);
 	
-	int totalSum = 0;
-	int numbers[10] = {1,2,3,4,5,6,7,8,9,10};
-	if(rank != 1)
-	{
-		MPI_Send(&numbers, //data being sent
-			10, //count of data elements
-			MPI_INT,//data type of elements
-			1,//address destination
-			0,//tag
-			MPI_COMM_WORLD);//group of processors
-	}else if(rank == 1)
-	{
-		MPI_Recv(&numbers,//data being sent
-			10,//count of elements
-			MPI_INT,//data type
-			0,//source
-			0,//tag
-			MPI_COMM_WORLD,//communicator
-			MPI_STATUS_IGNORE);//status
-		for(int i=0; i<sizeof(&numbers); i++)
-		{
-			totalSum += numbers[i];
-
-			
-		}
-		printf("Total Sum in processor %d is %d\n", rank,totalSum);
 	
-	}
-	printf("This is a non blocking operation in processor %d of %d\n", rank,size);
-
-	MPI_Finalize();
-
-	return 0;
-}	
-
+	MPI_Comm_size(MPI_COMM_WORLD, &nprosc);
+	MPI_Comm_rank(MPI_COMM_WORLD, &mypid);
 	
+	//declare information to share			
+	MPI_Status* stats[nprosc];
+	MPI_Request reqs[nprosc];
+							
+	
+	for (i = 1; i< 101; i++)
+	{													c = c + i + mypid * 100;
+													    }
+													    printf("Partial sum from process %d of total %d is : %d\n", mypid, nprosc, c);
+	MPI_Finalize();															
+	return 0;	
+}
