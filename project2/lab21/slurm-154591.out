@@ -1,0 +1,31 @@
+Java module loaded - the system's JAVA is replaced by JDK 1.8.0_211
+Partial sum: 7875 received from 0
+Partial sum: 23500 received from 1
+Partial sum: 39125 received from 2
+Partial sum: 54750 received from 3
+Rank 1 sends 23500 to rank 0
+Rank 2 recieves 54750 from Rank 3
+Rank sum at process 2 is: 93875
+Rank 3 sends 54750 to rank 2
+Rank 0 recieves 23500 from Rank 1
+Rank sum at process 0 is: 31375
+Rank 2 sends 93875 to rank 0
+Rank 0 recieves 93875 from Rank 2
+Rank sum at process 0 is: 125250
+Partial sum: 70375 received from 4
+Rank 4 recieves 86000 from Rank 5
+Rank sum at process 4 is: 156375
+Partial sum: 86000 received from 5
+Rank 5 sends 86000 to rank 4
+Partial sum: 101625 received from 6
+Rank 6 recieves 117250 from Rank 7
+Rank sum at process 6 is: 218875
+Rank 6 sends 218875 to rank 4
+Partial sum: 117250 received from 7
+Rank 7 sends 117250 to rank 6
+Rank 4 recieves 218875 from Rank 6
+Rank sum at process 4 is: 375250
+Rank 0 recieves 375250 from Rank 4
+Rank sum at process 0 is: 500500
+Total prefix sum is 500500
+Rank 4 sends 375250 to rank 0

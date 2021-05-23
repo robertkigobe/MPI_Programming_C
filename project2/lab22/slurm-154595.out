@@ -1,0 +1,25 @@
+Java module loaded - the system's JAVA is replaced by JDK 1.8.0_211
+Row=4 column=7 proc=8
+length of vector = 7
+sendcout=7 disp=0
+sendcout=7 disp=7
+sendcout=7 disp=14
+sendcout=7 disp=21
+sendcout=0 disp=28
+sendcout=0 disp=28
+sendcout=0 disp=28
+sendcout=0 disp=28
+
+
+**************1D Row wise Matrix multiplication ****************************************
+
+
+
+Matrix Vector Multiplication is:
+102.000
+126.000
+89.000
+128.000
+
+
+**************1D Row wise Matrix End of Results ****************************************

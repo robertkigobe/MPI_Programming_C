@@ -1,0 +1,17 @@
+Java module loaded - the system's JAVA is replaced by JDK 1.8.0_211
+Partial sum from process 0 of total 16 is : 5050
+Partial sum from process 1 of total 16 is : 15050
+Partial sum from process 2 of total 16 is : 25050
+Partial sum from process 3 of total 16 is : 35050
+Partial sum from process 12 of total 16 is : 125050
+Partial sum from process 13 of total 16 is : 135050
+Partial sum from process 15 of total 16 is : 155050
+Partial sum from process 11 of total 16 is : 115050
+Partial sum from process 14 of total 16 is : 145050
+Partial sum from process 4 of total 16 is : 45050
+Partial sum from process 6 of total 16 is : 65050
+Partial sum from process 8 of total 16 is : 85050
+Partial sum from process 7 of total 16 is : 75050
+Partial sum from process 5 of total 16 is : 55050
+Partial sum from process 9 of total 16 is : 95050
+Partial sum from process 10 of total 16 is : 105050

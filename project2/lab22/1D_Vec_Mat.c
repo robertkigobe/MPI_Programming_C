@@ -70,7 +70,8 @@ int main(int argc,char *argv[])
     count = 0;
     while(fscanf(fp,"%f",&n)!=-1){  count++; }
     printf("length of vector = %d\n",count);
-    if(column!=count) { printf("Dimensions do not match.\nCode Terminated"); MPI_Abort(MPI_COMM_WORLD,0); }
+    if(column!=count) { printf("Dimensions do not match.\nCode Terminated"); 
+    MPI_Abort(MPI_COMM_WORLD,0); }
     fseek( fp, 0, SEEK_SET );
     for(i=0;i<column;i++)
     {
@@ -95,7 +96,7 @@ int main(int argc,char *argv[])
     }
     sendcount[size-1] = sendcount[size-1] * column;
     for(i=0;i<size;i++)
-      printf("sendcout=%d disp=%d\n",sendcount[i],displace[i]);
+//      printf("sendcout=%d disp=%d\n",sendcount[i],displace[i]);
   }
   MPI_Bcast(&row,1,MPI_INT,0,MPI_COMM_WORLD);
   MPI_Bcast(&column,1,MPI_INT,0,MPI_COMM_WORLD);
@@ -125,11 +126,14 @@ int main(int argc,char *argv[])
   MPI_Gatherv(sum,count,MPI_FLOAT,result,reccount,disp,MPI_FLOAT,0,MPI_COMM_WORLD);
   if(rank==0)
   {
+
+printf("\n\n**************1D Row wise Matrix multiplication ****************************************\n\n\n");
     printf("\nMatrix Vector Multiplication is:\n");
     for(i=0;i<row;i++)
     {
        printf("%.3f\n",result[i]);
-    }     
+    } 
+printf("\n\n**************1D Row wise Matrix End of Results ****************************************\n");    
   }
   free(vec);
   free(sum);

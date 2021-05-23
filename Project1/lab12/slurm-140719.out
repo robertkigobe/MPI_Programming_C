@@ -1,0 +1,11 @@
+Java module loaded - the system's JAVA is replaced by JDK 1.8.0_211
+Partial sum from process 0 of total 10 is : 5050
+Partial sum from process 1 of total 10 is : 15050
+Partial sum from process 8 of total 10 is : 85050
+Partial sum from process 5 of total 10 is : 55050
+Partial sum from process 9 of total 10 is : 95050
+Partial sum from process 6 of total 10 is : 65050
+Partial sum from process 7 of total 10 is : 75050
+Partial sum from process 4 of total 10 is : 45050
+Partial sum from process 2 of total 10 is : 25050
+Partial sum from process 3 of total 10 is : 35050
